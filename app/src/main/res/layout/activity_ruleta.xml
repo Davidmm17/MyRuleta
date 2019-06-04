@@ -1,44 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RuletaActivity">
+    android:background="#4D9500"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center|center_vertical"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:text="" />
 
-    <ImageView
-        android:id="@+id/iv_wheel"
-        android:scaleType="centerInside"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="90dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        app:srcCompat="@drawable/ic_roulette2" />
-    <ImageView
-        android:id="@+id/id_pointer"
-        android:scaleType="centerInside"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="90dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        app:srcCompat="@drawable/ic_pointer2" />
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
-        android:text="Girar" />
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RuletaActivity">
+        <View android:layout_width="fill_parent" android:id="@+id/focus_view" android:layout_height="0dp" android:focusable="true" android:focusableInTouchMode="true"><requestFocus/></View>
+        <TextView
+            android:id="@+id/labelApuesta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
+            android:text="Apuesta: " />
+        <EditText
+            android:id="@+id/dineroApuesta"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/labelApuesta"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="4dp"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="0" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/simboloDinero2"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="100dp"
+            android:text="Girar" />
+        <TextView
+            android:id="@+id/simboloDinero2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/dineroApuesta"
+            android:layout_marginTop="40dp"
+            android:textSize="20dp"
+            android:text="€" />
+        <TextView
+            android:id="@+id/labelDineroActual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/simboloDinero2"
+            android:layout_marginLeft="30dp"
+
+            android:textSize="20dp"
+            android:text="Dinero actual: " />
+        <TextView
+            android:id="@+id/dineroActual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/simboloDinero2"
+            android:layout_toRightOf="@+id/labelDineroActual"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:text="0" />
+        <TextView
+            android:id="@+id/simboloDinero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/simboloDinero2"
+            android:layout_toRightOf="@+id/dineroActual"
+            android:layout_marginTop="40dp"
+            android:textSize="20dp"
+            android:text="€" />
+
+
+        <ImageView
+            android:id="@+id/iv_wheel"
+            android:scaleType="centerInside"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/dineroActual"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/ic_roulette2" />
+        <ImageView
+            android:id="@+id/ic_pointer"
+            android:scaleType="centerInside"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/dineroActual"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/ic_pointer2" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_wheel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textSize="20dp"
+            android:text="" />
+
+
+        <ToggleButton
+            android:id="@+id/apuestaAcero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_marginLeft="30dp"
+            android:textOff="0"
+            android:textOn="0"
+
+
+            />
+        <ToggleButton
+            android:id="@+id/apuestaArojo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_toRightOf="@id/apuestaAcero"
+            android:textOff="Rojo"
+            android:textOn="Rojo"
+
+
+            />
+        <ToggleButton
+            android:id="@+id/apuestaAnegro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_toRightOf="@id/apuestaArojo"
+            android:textOff="Negro"
+            android:textOn="Negro"
+
+
+            />
+
+        <ToggleButton
+            android:id="@+id/apuestaAnumero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_toRightOf="@id/apuestaAnegro"
+            android:textOff="Numero"
+            android:textOn="Numero"
+
+
+            />
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_weight=".28"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/spinner_border"
+            android:orientation="horizontal"
+            android:layout_below="@+id/apuestaAnumero">
+            <Spinner
+                android:id="@+id/spinner"
+                android:entries="@array/lista_apuestas"
+                android:prompt="@string/apuesta_prompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:spinnerMode="dropdown"
+                >
+
+
+            </Spinner>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_drop"
+                />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
