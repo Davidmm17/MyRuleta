@@ -73,6 +73,7 @@
         android:hint="Nombre Jugador" />
 
     <Button
+        android:id="@+id/botonJugar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"

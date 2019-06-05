@@ -2,43 +2,43 @@
     <string name="app_name">MyRuleta</string>
     <string name="apuesta_prompt">Elige el numero a apostar</string>
     <string-array name="lista_apuestas">
-        <item> 0 </item>
-        <item> 1 rojo </item>
-        <item> 2 negro</item>
-        <item> 3 rojo</item>
-        <item> 4 negro</item>
-        <item> 5 rojo</item>
-        <item> 6 negro</item>
-        <item> 7 rojo</item>
-        <item> 8 negro</item>
-        <item> 9 rojo</item>
-        <item> 10 negro</item>
-        <item> 11 negro</item>
-        <item> 12 rojo</item>
-        <item> 13 negro</item>
-        <item> 14 rojo</item>
-        <item> 15 negro</item>
-        <item> 16 rojo</item>
-        <item> 17 negro</item>
-        <item> 18 rojo</item>
-        <item> 19 rojo</item>
-        <item> 20 negro</item>
-        <item> 21 rojo</item>
-        <item> 22 negro</item>
-        <item> 23 rojo</item>
-        <item> 24 negro</item>
-        <item> 25 rojo</item>
-        <item> 26 negro</item>
-        <item> 27 rojo</item>
-        <item> 28 negro</item>
-        <item> 29 negro</item>
-        <item> 30 rojo</item>
-        <item> 31 negro</item>
-        <item> 32 rojo</item>
-        <item> 33 negro</item>
-        <item> 34 rojo</item>
-        <item> 35 negro</item>
-        <item> 36 rojo</item>
+        <item>0</item>
+        <item>1 rojo</item>
+        <item>2 negro</item>
+        <item>3 rojo</item>
+        <item>4 negro</item>
+        <item>5 rojo</item>
+        <item>6 negro</item>
+        <item>7 rojo</item>
+        <item>8 negro</item>
+        <item>9 rojo</item>
+        <item>10 negro</item>
+        <item>11 negro</item>
+        <item>12 rojo</item>
+        <item>13 negro</item>
+        <item>14 rojo</item>
+        <item>15 negro</item>
+        <item>16 rojo</item>
+        <item>17 negro</item>
+        <item>18 rojo</item>
+        <item>19 rojo</item>
+        <item>20 negro</item>
+        <item>21 rojo</item>
+        <item>22 negro</item>
+        <item>23 rojo</item>
+        <item>24 negro</item>
+        <item>25 rojo</item>
+        <item>26 negro</item>
+        <item>27 rojo</item>
+        <item>28 negro</item>
+        <item>29 negro</item>
+        <item>30 rojo</item>
+        <item>31 negro</item>
+        <item>32 rojo</item>
+        <item>33 negro</item>
+        <item>34 rojo</item>
+        <item>35 negro</item>
+        <item>36 rojo</item>
 
     </string-array>
 </resources>

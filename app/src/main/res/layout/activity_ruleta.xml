@@ -42,7 +42,8 @@
             android:layout_toRightOf="@+id/simboloDinero2"
             android:layout_marginTop="28dp"
             android:layout_marginLeft="100dp"
-            android:text="Girar" />
+            android:text="Girar"
+            android:onClick="girarRuleta"/>
         <TextView
             android:id="@+id/simboloDinero2"
             android:layout_width="wrap_content"

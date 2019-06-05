@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "666073599033",
+    "firebase_url": "https://myruleta.firebaseio.com",
+    "project_id": "myruleta",
+    "storage_bucket": "myruleta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666073599033:android:e1c52a1ff86505bc",
+        "android_client_info": {
+          "package_name": "com.example.myruleta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "666073599033-89t1707tde7iqavh000dam292k551a1d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myruleta",
+            "certificate_hash": "eed1fb454395d91817ee26b5b13412fe76a7cefe"
+          }
+        },
+        {
+          "client_id": "666073599033-21h599k8gk915v1rh7ritouqeen2k1ln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo2dxBhseTMiPzrGGZztj4J_tzd8zYCNc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666073599033-21h599k8gk915v1rh7ritouqeen2k1ln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
