@@ -1,5 +1,7 @@
 package com.example.myruleta;
 
+import android.app.ActivityManager;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -59,11 +61,30 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    private boolean isMyServiceRunning(Class<?> serviceClass) {
+        ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+            if (serviceClass.getName().equals(service.service.getClassName())) {
+                return true;
+            }
+        }
+        return false;
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.item1:
-                Toast.makeText(this,"Webview Selected ", Toast.LENGTH_SHORT).show();
+
+
+
+                if(!isMyServiceRunning(MyService.class)){
+                    startService(new Intent(this, MyService.class));
+                    Toast.makeText(this,"Encender musica", Toast.LENGTH_SHORT).show();
+                }
+                else if (isMyServiceRunning(MyService.class)){
+                    stopService(new Intent(this, MyService.class));
+                    Toast.makeText(this,"Apagar musica ", Toast.LENGTH_SHORT).show();
+                }
 
                 return true;
 
